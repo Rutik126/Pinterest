@@ -1,0 +1,21 @@
+<% include ./partials/header.ejs %>
+<div class=" h-40 w-1/3   px-4 py-8  justify-center flex-center">
+  <form action="/createpost" method="post" enctype="multipart/form-data">
+    <div class="flex flex-col bg-gray-100 rounded-lg shadow-md overflow-hidden">
+      <div class="flex flex-col md:flex-row md:items-center p-4 gap-3">
+            <div class="w-full mb-4 md:mb-0 mr-4">
+              <i class="ri-upload-2-fill"></i>
+                <input type="file" name="postimage" class="w-32" style="color: rgba(0, 0, 0, 0)" value="Upload Image">
+            </div>
+        <div class="flex-grow">
+          <input type="text" class="appearance-none rounded-md relative block  px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" placeholder="Post Title" name="title">
+        </div>
+      </div>
+      <div class="p-2 items-center">
+        <textarea rows="5" class="appearance-none rounded-md resize-none relative block w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" placeholder="Post description..." name="description"></textarea>
+      </div>
+      <input type="submit" class=" place-content-center ml-12 w-64 h-12 p-6 my-4 py-2 text-center text-white bg-red-600 rounded-full shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 items-center flex flex-center" value="Create Post">
+    </div>
+  </form>
+  </div>
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,16 @@
+<% include ./partials/header.ejs %>
+<div class="grid ">
+<% posts.forEach(function(ele){ %>
+    <div class=" img1 " >
+      <div class="box"><div class="box-stat"></div>
+           <img class="blur-[.9px] hover:blur-none" src="/images/uploads/<%= ele.image %>" alt="">
+           <div class="pin-info px-4 py-3 items-center text-gray-700">
+            <p href="" class="font-semibold"><%= ele.title %></p>
+            <br>
+            <!-- <p href="" class="font-semibold"><%= user.username %></p> -->
+          </div></div>
+      </div>
+  
+  <% }) %>
+</div>
+<% include ./partials/footer.ejs %>

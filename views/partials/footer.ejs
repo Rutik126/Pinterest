@@ -1,0 +1,22 @@
+</body>
+<script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+<script>
+    const pins = document.querySelectorAll('.pin');
+    const modal = document.getElementById('post-modal');
+    const enlargedImage = document.getElementById('enlarged-image');
+    const closeModalBtn = document.querySelector('.close-modal');
+
+    pins.forEach(pin => {
+      pin.addEventListener('click', () => {
+        const pinId = pin.dataset.pinId;
+        const fullSizeImageUrl = `images/pin-${pinId}.jpg`;
+        enlargedImage.src = fullSizeImageUrl;
+        modal.classList.remove('hidden');
+      });
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+  </script>
+</html>
