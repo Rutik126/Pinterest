@@ -7,7 +7,7 @@
     "start": "node ./bin/www",
     "predeploy":"npm run build",
     "deploy" : "gh-pages -d build",
-    "build": "npm i"
+    "build": "react-scripts build"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
